@@ -58,6 +58,7 @@ const generateCard = () => {
 
 	//Cambiar valor de la carta
 	cardName.textContent = `${value.name} of ${suit.name}`;
+	cardName.style.color = (suit.name == "Hearts" || suit.name == "Diamonds") ? "red" : "black";
 }
 // Cambio  de carta cada 4 segundos
 let counter = 0
