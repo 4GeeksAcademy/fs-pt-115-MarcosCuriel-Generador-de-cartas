@@ -59,6 +59,16 @@ const generateCard = () => {
 	//Cambiar valor de la carta
 	cardName.textContent = `${value.name} of ${suit.name}`;
 }
+// Cambio  de carta cada 4 segundos
+let counter = 0
+const stopRandomCard = setInterval(() => {
+	generateCard();
+	counter++;
+	if (counter === 4) {
+		clearInterval(stopRandomCard)
+	}
+}, 4000);
+
 generateCard();
 
 document.getElementById('generateBtn').addEventListener('click', generateCard);
