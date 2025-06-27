@@ -1,35 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" href="./assets/img/4geeks.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Poker card Generator</title>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+	<!-- Fontawesome is our recomended library for icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+	<!-- Write your HTML code here, you can delete everything withing the body tags -->
+	<main>
+		<header>
+			<h1>🃏 Poker Card Generator</h1>
+		</header>
+
+		<section class="card-display">
+			<article class="card" id="card">
+				<div class="card-top">
+					<div class="card-value" id="topValue"></div>
+					<div class="card-suit" id="topSuit"></div>
+				</div>
+
+				<div class="card-center" id="centerSuit"></div>
+
+				<div class="card-bottom">
+					<div class="card-value" id="bottomValue"></div>
+					<div class="card-suit" id="bottomSuit"></div>
+				</div>
+			</article>
+		</section>
+
+		<section class="card-info" aria-label="Información de la carta">
+			<p class="card-name" id="cardName"></p>
+		</section>
+
+		<section class="control">
+			<button class="button" id="generateBtn">🎲 Generate new card</button>
+		</section>
+	</main>
+	<!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+	<script type="module" src="/app.js"></script>
+</body>
+
 </html>
